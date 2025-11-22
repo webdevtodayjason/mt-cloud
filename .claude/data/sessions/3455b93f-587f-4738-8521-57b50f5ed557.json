@@ -1,0 +1,9 @@
+{
+  "session_id": "3455b93f-587f-4738-8521-57b50f5ed557",
+  "prompts": [
+    "Ready. Awaiting instructions.",
+    "Run a comprehensive CodeRabbit review on the Z.ai integration:\n\n1. Run: coderabbit review --review-type uncommitted --output-mode plain\n2. Wait for the review to complete (7-30 minutes)\n3. Save full results to docs/CODERABBIT_ZAI_REVIEW.md\n4. Create a summary document (docs/CODERABBIT_ZAI_SUMMARY.md) with:\n   - Critical issues (must fix)\n   - Important issues (should fix)\n   - Minor issues (nice to have)\n   - Security analysis\n   - Performance analysis\n   - Recommendations\n\nFocus on the Z.ai integration files (zai_*.py) and any changes to agent_manager.py.\n\nThis review will help ensure the Z.ai integration is production-ready.",
+    "Run CodeRabbit review on the security patches that were just applied. Focus on:\n\n1. `/Users/sem/mao-Z/__tests__/e2e/TEST_SUITE_SUMMARY.md` - Verify API key removed\n2. `/Users/sem/mao-Z/docs/ZAI_CLIENT_WRAPPER_SUMMARY.md` - Verify API key removed  \n3. `/Users/sem/mao-Z/apps/orchestrator_3_stream/backend/modules/agent_manager.py` - Verify config validation added\n\nRun CodeRabbit on these specific files to confirm the critical security issues are resolved.\n\nSave the review results to `/Users/sem/mao-Z/docs/CODERABBIT_SECURITY_PATCH_REVIEW.md`"
+  ],
+  "agent_name": "Prism"
+}

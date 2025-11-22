@@ -1,0 +1,7 @@
+{
+  "session_id": "b8593061-22a7-4151-8a34-ed3db3dba7b0",
+  "prompts": [
+    "Test CodeRabbit CLI Integration\n\nYou now have access to a new custom tool: `run_coderabbit_review`\n\n**Your Task:**\n1. Test the CodeRabbit CLI tool on the MAO codebase\n2. Run a review of uncommitted changes (if any exist)\n3. If no uncommitted changes, review all recent changes\n4. Report findings in a structured format\n\n**Working Directory:** /Users/sem/mao-Z\n\n**Test the tool with these parameters:**\n\n```python\nrun_coderabbit_review(\n    review_type=\"uncommitted\",\n    output_mode=\"prompt-only\",\n    working_directory=\"/Users/sem/mao-Z\",\n    background=False,\n    timeout=300  # 5 min timeout for testing\n)\n```\n\n**If no uncommitted changes exist, try:**\n\n```python\nrun_coderabbit_review(\n    review_type=\"all\",\n    output_mode=\"prompt-only\",\n    working_directory=\"/Users/sem/mao-Z\",\n    background=False,\n    timeout=300\n)\n```\n\n**Report Format:**\n\nCreate a test report at: `/Users/sem/mao-Z/docs/CODERABBIT_TEST_REPORT.md`\n\nInclude:\n- \u2705/\u274c Tool execution status\n- Number of issues found (if any)\n- Categories of issues (critical, warning, info)\n- Sample findings (2-3 examples)\n- Tool performance (execution time)\n- Any errors or issues encountered\n- Recommendations\n\n**Important:** CodeRabbit requires authentication. If you get auth errors, document them in the report."
+  ],
+  "agent_name": "Meridian"
+}

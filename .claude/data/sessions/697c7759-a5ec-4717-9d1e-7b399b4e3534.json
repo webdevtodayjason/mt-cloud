@@ -1,0 +1,8 @@
+{
+  "session_id": "697c7759-a5ec-4717-9d1e-7b399b4e3534",
+  "prompts": [
+    "/prime",
+    "Review docs/ZAI-INTEGRATION-PLAN.md and create a detailed execution plan for implementing Z.ai integration into MAO. Then create specialized agents to execute each phase:\n\n1. Create a meta-agent to analyze the plan and break it into discrete tasks\n2. Create a research agent to verify Z.ai SDK compatibility and test basic connectivity  \n3. Create a development agent to implement the ZaiAgentClient wrapper\n4. Create a testing agent to validate the implementation\n5. Create a documentation agent to update all relevant docs\n\nAfter creating the agents, coordinate them to execute Phase 2 (Install & Test Z.ai SDK) from the integration plan. The goal is to:\n- Install zai-sdk package\n- Test basic connection with ZAI_API_KEY (Active key is in the .env file)\n- Verify API compatibility\n- Document any issues or blockers\n- Report findings\n\n\nUse the working directory: /Users/sem/mao-z\n\nStart by reading the integration plan, then create your execution strategy and agents."
+  ],
+  "agent_name": "Prism"
+}

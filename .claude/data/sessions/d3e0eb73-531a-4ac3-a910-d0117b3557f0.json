@@ -1,0 +1,8 @@
+{
+  "session_id": "d3e0eb73-531a-4ac3-a910-d0117b3557f0",
+  "prompts": [
+    "Ready. Awaiting instructions.",
+    "Fix both critical security issues now:\n\n1. Remove exposed API key from documentation files\n2. Add config validation to agent_manager.py\n\nThese are deployment blockers - proceed immediately."
+  ],
+  "agent_name": "Meridian"
+}
