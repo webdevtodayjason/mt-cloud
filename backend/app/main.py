@@ -60,11 +60,16 @@ async def shutdown_event():
     print(f"👋 {settings.PROJECT_NAME} shutting down...")
 
 
-# TODO: Add API routers
-# from app.api import organizations, clients, sites, devices, metrics, ai
-# app.include_router(organizations.router, prefix=f"{settings.API_V1_STR}/organizations", tags=["organizations"])
-# app.include_router(clients.router, prefix=f"{settings.API_V1_STR}/clients", tags=["clients"])
-# app.include_router(sites.router, prefix=f"{settings.API_V1_STR}/sites", tags=["sites"])
-# app.include_router(devices.router, prefix=f"{settings.API_V1_STR}/devices", tags=["devices"])
-# app.include_router(metrics.router, prefix=f"{settings.API_V1_STR}/metrics", tags=["metrics"])
-# app.include_router(ai.router, prefix=f"{settings.API_V1_STR}/ai", tags=["ai"])
+# Include API routers
+from app.api import devices, metrics, websockets
+
+app.include_router(devices.router)
+app.include_router(metrics.router)
+app.include_router(websockets.router)
+
+# TODO: Add remaining routers as they're implemented
+# from app.api import organizations, clients, sites, ai
+# app.include_router(organizations.router)
+# app.include_router(clients.router)
+# app.include_router(sites.router)
+# app.include_router(ai.router)
