@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Main Router",
+    "model": "CRS310-8G+2S+",
+    "ip": "192.168.100.1",
+    "description": "8x 2.5G + 2x 10G SFP+",
+    "success": true,
+    "host": "192.168.100.1",
+    "identity": "MikroTik CRS310",
+    "version": "7.20.4 (stable)",
+    "platform": "CRS310-8G+2S+",
+    "uptime": "1d20h21m20s",
+    "cpu_load": "1",
+    "free_memory": "168476672",
+    "total_memory": "268435456"
+  },
+  {
+    "name": "10G Switch",
+    "model": "CRS309-1G-8S+",
+    "ip": "192.168.100.2",
+    "description": "1x 1G + 8x 10G SFP+",
+    "success": true,
+    "host": "192.168.100.2",
+    "identity": "MikroTik",
+    "version": "7.16.1 (stable)",
+    "platform": "CRS309-1G-8S+",
+    "uptime": "1d20h44m19s",
+    "cpu_load": "0",
+    "free_memory": "447295488",
+    "total_memory": "536870912"
+  },
+  {
+    "name": "24-port Switch",
+    "model": "CRS226-24G-2S+",
+    "ip": "192.168.100.3",
+    "description": "24x 1G + 2x 10G SFP+",
+    "success": true,
+    "host": "192.168.100.3",
+    "identity": "CRS326 MikroTik",
+    "version": "7.20.4 (stable)",
+    "platform": "CRS226-24G-2S+",
+    "uptime": "7h36m51s",
+    "cpu_load": "45",
+    "free_memory": "23236608",
+    "total_memory": "67108864"
+  }
+]
