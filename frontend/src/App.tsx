@@ -10,7 +10,7 @@ interface Device {
   model: string | null
   firmware_version: string | null
   is_online: boolean
-  last_seen: string | null
+  last_seen_at: string | null
 }
 
 interface SystemMetrics {

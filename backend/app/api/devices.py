@@ -88,7 +88,7 @@ async def create_device(
             serial_number=None,  # TODO: Extract from device
             firmware_version=connection_result.get('version'),
             is_online=True,
-            last_seen=datetime.utcnow(),
+            last_seen_at=datetime.utcnow(),
             site_id=device_data.site_id
         )
         
@@ -247,7 +247,7 @@ async def test_device_connection(
         
         # Update device status
         device.is_online = result['success']
-        device.last_seen = datetime.utcnow()
+        device.last_seen_at = datetime.utcnow()
         
         if result['success']:
             device.firmware_version = result.get('version')
@@ -290,6 +290,6 @@ async def get_device_status(
         "name": device.name,
         "ip_address": device.ip_address,
         "is_online": device.is_online,
-        "last_seen": device.last_seen,
+        "last_seen_at": device.last_seen_at,
         "firmware_version": device.firmware_version
     }

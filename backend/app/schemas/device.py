@@ -76,7 +76,7 @@ class DeviceResponse(BaseModel):
     serial_number: Optional[str]
     firmware_version: Optional[str]
     is_online: bool
-    last_seen: Optional[datetime]
+    last_seen_at: Optional[datetime]
     site_id: int
     created_at: datetime
     updated_at: datetime

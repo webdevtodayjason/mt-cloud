@@ -205,7 +205,7 @@ async def websocket_dashboard(websocket: WebSocket):
                             "is_online": d.is_online,
                             "device_type": d.device_type,
                             "model": d.model,
-                            "last_seen": d.last_seen.isoformat() if d.last_seen else None
+                            "last_seen": d.last_seen_at.isoformat() if d.last_seen_at else None
                         }
                         for d in devices
                     ]
