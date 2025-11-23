@@ -17,7 +17,7 @@ interface SystemMetrics {
   cpu_load: number
   memory_used: number
   memory_total: number
-  memory_percent: number
+  memory_percent?: number
   uptime: string
   version: string
 }
@@ -72,6 +72,14 @@ function App() {
     try {
       const response = await fetch(`${API_BASE}/api/v1/metrics/devices/${deviceId}/current`)
       const data = await response.json()
+      
+      // Calculate memory_percent if not provided
+      if (data.system && !data.system.memory_percent) {
+        data.system.memory_percent = data.system.memory_total > 0 
+          ? Math.round((data.system.memory_used / data.system.memory_total) * 100)
+          : 0
+      }
+      
       setMetrics(data)
     } catch (error) {
       console.error('Failed to fetch metrics:', error)
@@ -215,19 +223,19 @@ function App() {
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="text-lg font-semibold">Memory</h3>
                       <span className="text-2xl font-bold text-purple-400">
-                        {metrics.system.memory_percent}%
+                        {metrics.system.memory_percent || 0}%
                       </span>
                     </div>
                     <div className="w-full bg-gray-700 rounded-full h-3 mb-2">
                       <div
                         className={`h-3 rounded-full transition-all ${
-                          metrics.system.memory_percent > 80 
+                          (metrics.system.memory_percent || 0) > 80 
                             ? 'bg-red-500' 
-                            : metrics.system.memory_percent > 50 
+                            : (metrics.system.memory_percent || 0) > 50 
                             ? 'bg-yellow-500' 
                             : 'bg-green-500'
                         }`}
-                        style={{ width: `${metrics.system.memory_percent}%` }}
+                        style={{ width: `${metrics.system.memory_percent || 0}%` }}
                       />
                     </div>
                     <div className="text-xs text-gray-400">
